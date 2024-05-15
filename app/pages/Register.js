@@ -1,5 +1,4 @@
 'use client';
-
 import Link from 'next/link';
 import styles from '../styles/login.css'
 import { useState } from 'react';
@@ -8,7 +7,7 @@ import { MdOutlineEmail } from "react-icons/md";
 import { MdOutlineSmartphone } from "react-icons/md";
 import { FaCity } from "react-icons/fa";
 
-const Rgister = () => {
+const Register = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
@@ -23,8 +22,7 @@ const Rgister = () => {
   return (
     <div className="login-container">
       <form className="login-form" onSubmit={handleSubmit}>
-
-    
+ 
         <label className='login-label'>Username:</label>
         <div className='input-holder'>
           <input type="text" className='login-input' value={username} onChange={(e) => setUsername(e.target.value)} />
@@ -34,7 +32,6 @@ const Rgister = () => {
         </div>
         <br />
 
-    
        <label className='loginLabel'>Password:</label>
        <div className='input-holder'>
         <input type="password" className='login-input' value={password} onChange={(e) => setPassword(e.target.value)} />
@@ -52,7 +49,6 @@ const Rgister = () => {
         </div>
       </div>
         <br />
-
 
         <label className='loginLabel'>Phone Number</label>
        <div className='input-holder'>
@@ -74,9 +70,9 @@ const Rgister = () => {
 
         <button type="submit" className='login-button'>Register</button>
         <br />
-        <Link href="./Login.js">
+      
           <div className='register-link'>Don't have an account? Login</div>
-        </Link>
+  
         </form>
     </div>
   );

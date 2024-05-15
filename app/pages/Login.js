@@ -1,5 +1,4 @@
 'use client';
-
 import Link from 'next/link';
 import styles from '../styles/login.css'
 import { useState } from 'react';
@@ -12,15 +11,9 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    // Add login logic here
-  };
-
   return (
     <div className="login-container">
-      <form className="login-form" onSubmit={handleSubmit}>
-
+      <form className="login-form">
     
         <label className='login-label'>Username:</label>
         <div className='input-holder'>
@@ -30,7 +23,6 @@ const Login = () => {
           </div>
         </div>
         <br />
-
     
        <label className='loginLabel'>Password:</label>
        <div className='input-holder'>
@@ -40,12 +32,15 @@ const Login = () => {
         </div>
       </div>
         <br />
-
+      
         <button type="submit" className='login-button'>Login</button>
+
         <br />
-        <Link href="/Register">
-          <div className='register-link'>Don't have an account? Register</div>
-        </Link>
+          <div className='register-link'>
+          <Link href='./Register'>
+          Don't have an account? Register
+          </Link>
+          </div>
         </form>
     </div>
   );
